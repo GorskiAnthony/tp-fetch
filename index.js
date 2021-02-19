@@ -76,9 +76,9 @@ function display(data) {
 			labels: labels,
 			datasets: [
 				{
-					label: `${SELECT.value}`,
+					label: `bitcoin`,
 					data: datas,
-					backgroundColor: ["rgba(255, 99, 132, 0.2)"],
+					backgroundColor: ["rgba(217, 119, 7, 0.5)"],
 				},
 			],
 		},
@@ -90,14 +90,15 @@ function display(data) {
 	datas = [];
 }
 
-FORM.addEventListener("submit", (event) => {
-	event.preventDefault();
-	// À chaque soumission on appel la fonction getData()
-	getData(SELECT.value);
-});
+// FORM.addEventListener("submit", (event) => {
+// 	event.preventDefault();
+// 	// À chaque soumission on appel la fonction getData()
+// 	getData(SELECT.value);
+// });
 
 // appel a ma fonction avec le bitcoin par défaut
-getData(SELECT.value);
+//getData(SELECT.value);
+getData("bitcoin");
 
 // En attente x)
 //getOptionsList();

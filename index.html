@@ -8,18 +8,59 @@
 			src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
 			defer
 		></script>
+		<link
+			href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+			rel="stylesheet"
+		/>
 		<script src="index.js" defer></script>
-		<title>View bitcoin</title>
+		<title>TP Bitcoin</title>
 	</head>
+
 	<body>
-		<h1>Diagramme évolution des cryptos</h1>
+		<!-- 
+			//!TODO je dois faire le JS
 		<form>
 			<select>
 				<option value="bitcoin">Bitcoin</option>
 			</select>
 			<button type="submit">rechercher</button>
 		</form>
+		-->
 		<!-- Chart -->
-		<canvas id="myChart"></canvas>
+		<section class="text-gray-600 body-font">
+			<div class="py-8 flex justify-center items-center">
+				<div>
+					<h1
+						class="flex-grow text-4xl font-medium title-font text-gray-900"
+					>
+						Diagramme évolution du bitcoin.
+					</h1>
+				</div>
+			</div>
+		</section>
+		<div class="w-5/6 mx-auto">
+			<canvas id="myChart"></canvas>
+		</div>
+
+		<footer class="text-gray-600 body-font">
+			<div
+				class="container px-5 py-4 mx-auto flex items-center sm:flex-row flex-col"
+			>
+				<a
+					class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
+				>
+					<span class="ml-3 text-xl">Anthony Gorski</span>
+				</a>
+				<p
+					class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4"
+				>
+					&copy; <span id="year"></span>
+				</p>
+			</div>
+		</footer>
+		<script>
+			const year = new Date().getFullYear();
+			document.querySelector("#year").innerText = year;
+		</script>
 	</body>
 </html>
